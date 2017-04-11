@@ -1,0 +1,7 @@
+[
+  ["sonoff", "o", {"title": "Sonoff configuration"}],
+  ["sonoff.button", "i", 0, {"title": "GPIO button pin"}],
+  ["sonoff.relay", "i", 12, {"title": "GPIO relay pin"}],
+  ["sonoff.led", "i", 13, {"title": "GPIO LED pin"}],
+  ["sonoff.spare", "i", 14, {"title": "GPIO spare pin"}]
+]

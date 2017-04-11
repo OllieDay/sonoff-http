@@ -1,0 +1,12 @@
+version: "1.0"
+arch: esp8266
+mongoose_os_version: master
+sources:
+- src
+filesystem:
+- fs
+extra_files: []
+skeleton_version: 2017-03-17
+ffi_symbols: []
+build_vars:
+  APP_CONF_SCHEMA: src/sonoff.yaml
