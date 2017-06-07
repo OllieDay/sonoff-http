@@ -34,7 +34,7 @@ function request(url, method, success, error) {
 	let xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 	xhr.open(method, url);
 
-	xhr.onreadystatechange = function () {
+	xhr.onreadystatechange = () => {
 		if (xhr.readyState === 4) {
 			if (xhr.status == 200) {
 				success(xhr.response);
@@ -44,7 +44,7 @@ function request(url, method, success, error) {
 		}
 	};
 
-	xhr.onerror = function() {
+	xhr.onerror = () => {
 		error(xhr.status, xhr.statusText);
 	}
 
