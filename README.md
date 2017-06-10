@@ -37,3 +37,23 @@ with the copper._
 5. Configure Wi-Fi settings with `mos wifi <ssid> <password>` where `<ssid>` is the network SSID and `password` is the
 Wi-Fi password
 6. Reboot the device to take it out of flash mode
+
+## Usage
+Check your router for connected clients to obtain the LAN IP address of the Sonoff device which should be connected
+to your Wi-Fi network. Open a web browser and navigate to http://\<address\>/index.html - you will see a web page with
+a toggle switch that allows you to toggle the device off and on!
+
+## HTTP API
+
+The firmware supports the following HTTP methods to retrieve and set the device state:
+
+### GET /sonoff
+Retrieve the device state. Returns `200 OK` on success with the response body containing either `0` for off or `1` for
+on.
+
+Curl example: `curl http://<address>/sonoff`
+
+### POST /sonoff
+Set the device state. The raw request body should contain either `0` for off or `1` for on. Returns `200 OK` on success.
+
+Curl example: `curl -X POST -H "Content-Type: text/plain" -d <power> http://<address>/sonoff`
