@@ -24,3 +24,16 @@ with the copper._
 | 3                            | TX      | RX   |
 | 4                            | GND     | GND  |
 | 5                            | GPIO 14 |      |
+
+
+![](sonoff.jpg)
+
+## Building and flashing the firmware
+1. Download and install the `mos` toolchain from
+[https://mongoose-os.com/software.html](https://mongoose-os.com/software.html)
+2. Build the firmware with `mos build`
+3. Disconnect the FTDI so the device is off and reconnect while holding down the power button to boot into flash mode
+4. Flash the firmware onto the device with `mos flash`
+5. Configure Wi-Fi settings with `mos wifi <ssid> <password>` where `<ssid>` is the network SSID and `password` is the
+Wi-Fi password
+6. Reboot the device to take it out of flash mode
