@@ -34,7 +34,7 @@ with the copper._
 2. Build the firmware with `mos build`
 3. Disconnect the FTDI so the device is off and reconnect while holding down the power button to boot into flash mode
 4. Flash the firmware onto the device with `mos flash`
-5. Configure Wi-Fi settings with `mos wifi <ssid> <password>` where `<ssid>` is the network SSID and `password` is the
+5. Configure Wi-Fi settings with `mos wifi <ssid> <password>` where `<ssid>` is the network SSID and `<password>` is the
 Wi-Fi password
 6. Reboot the device to take it out of flash mode
 
